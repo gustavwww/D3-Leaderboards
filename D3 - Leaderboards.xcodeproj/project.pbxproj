@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213DE1E43A49C009F5F17 /* HeroCell.swift */; };
+		973213E11E43A65F009F5F17 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213E01E43A65F009F5F17 /* Player.swift */; };
+		973213E31E43A6B7009F5F17 /* Char.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213E21E43A6B7009F5F17 /* Char.swift */; };
 		97D583A71E43923700855DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A61E43923700855DCE /* AppDelegate.swift */; };
-		97D583A91E43923700855DCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A81E43923700855DCE /* ViewController.swift */; };
+		97D583A91E43923700855DCE /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A81E43923700855DCE /* BoardVC.swift */; };
 		97D583AC1E43923700855DCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D583AA1E43923700855DCE /* Main.storyboard */; };
 		97D583AE1E43923700855DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D583AD1E43923700855DCE /* Assets.xcassets */; };
 		97D583B11E43923700855DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D583AF1E43923700855DCE /* LaunchScreen.storyboard */; };
+		97D583BC1E4397FB00855DCE /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583BB1E4397FB00855DCE /* HeaderView.swift */; };
+		97D583BF1E43980F00855DCE /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583BE1E43980F00855DCE /* Shadow.swift */; };
+		9DB523430BA77508B77463D5 /* Pods_D3___Leaderboards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD2A67DB8F5CD879283DB97 /* Pods_D3___Leaderboards.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AD2A67DB8F5CD879283DB97 /* Pods_D3___Leaderboards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3___Leaderboards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A3D3193B419F4EDEF642CB /* Pods-D3 - Leaderboards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3 - Leaderboards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards.debug.xcconfig"; sourceTree = "<group>"; };
+		973213DE1E43A49C009F5F17 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		973213E01E43A65F009F5F17 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		973213E21E43A6B7009F5F17 /* Char.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Char.swift; sourceTree = "<group>"; };
 		97D583A31E43923700855DCE /* D3 - Leaderboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D3 - Leaderboards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D583A61E43923700855DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97D583A81E43923700855DCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97D583A81E43923700855DCE /* BoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
 		97D583AB1E43923700855DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97D583AD1E43923700855DCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97D583B01E43923700855DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97D583B21E43923700855DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D583BB1E4397FB00855DCE /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		97D583BE1E43980F00855DCE /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		F249B06F5A658B72637E0532 /* Pods-D3 - Leaderboards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3 - Leaderboards.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB523430BA77508B77463D5 /* Pods_D3___Leaderboards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		559E9B3FE42E92D6309A4039 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32A3D3193B419F4EDEF642CB /* Pods-D3 - Leaderboards.debug.xcconfig */,
+				F249B06F5A658B72637E0532 /* Pods-D3 - Leaderboards.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		97D5839A1E43923700855DCE = {
 			isa = PBXGroup;
 			children = (
 				97D583A51E43923700855DCE /* D3 - Leaderboards */,
 				97D583A41E43923700855DCE /* Products */,
+				559E9B3FE42E92D6309A4039 /* Pods */,
+				D85318F439F06BD94652237B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,59 @@
 		97D583A51E43923700855DCE /* D3 - Leaderboards */ = {
 			isa = PBXGroup;
 			children = (
+				97D583BD1E4397FF00855DCE /* Protocols */,
+				97D583BA1E4397E800855DCE /* Model */,
+				97D583B91E4397E000855DCE /* View */,
+				97D583B81E4397D700855DCE /* Controller */,
 				97D583A61E43923700855DCE /* AppDelegate.swift */,
-				97D583A81E43923700855DCE /* ViewController.swift */,
+				97D583A81E43923700855DCE /* BoardVC.swift */,
 				97D583AA1E43923700855DCE /* Main.storyboard */,
-				97D583AD1E43923700855DCE /* Assets.xcassets */,
 				97D583AF1E43923700855DCE /* LaunchScreen.storyboard */,
+				97D583AD1E43923700855DCE /* Assets.xcassets */,
 				97D583B21E43923700855DCE /* Info.plist */,
 			);
 			path = "D3 - Leaderboards";
+			sourceTree = "<group>";
+		};
+		97D583B81E4397D700855DCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		97D583B91E4397E000855DCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97D583BB1E4397FB00855DCE /* HeaderView.swift */,
+				973213DE1E43A49C009F5F17 /* HeroCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		97D583BA1E4397E800855DCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				973213E01E43A65F009F5F17 /* Player.swift */,
+				973213E21E43A6B7009F5F17 /* Char.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		97D583BD1E4397FF00855DCE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				97D583BE1E43980F00855DCE /* Shadow.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D85318F439F06BD94652237B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AD2A67DB8F5CD879283DB97 /* Pods_D3___Leaderboards.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97D583B51E43923700855DCE /* Build configuration list for PBXNativeTarget "D3 - Leaderboards" */;
 			buildPhases = (
+				7274749A3AB2F3A75A57B4FE /* [CP] Check Pods Manifest.lock */,
 				97D5839F1E43923700855DCE /* Sources */,
 				97D583A01E43923700855DCE /* Frameworks */,
 				97D583A11E43923700855DCE /* Resources */,
+				EDF80F1837EBCD0DE5551E1E /* [CP] Embed Pods Frameworks */,
+				B77B95AF93F3D779B9D2DB94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +206,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7274749A3AB2F3A75A57B4FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B77B95AF93F3D779B9D2DB94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF80F1837EBCD0DE5551E1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97D5839F1E43923700855DCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97D583A91E43923700855DCE /* ViewController.swift in Sources */,
+				973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */,
+				973213E31E43A6B7009F5F17 /* Char.swift in Sources */,
+				97D583A91E43923700855DCE /* BoardVC.swift in Sources */,
+				97D583BF1E43980F00855DCE /* Shadow.swift in Sources */,
+				97D583BC1E4397FB00855DCE /* HeaderView.swift in Sources */,
+				973213E11E43A65F009F5F17 /* Player.swift in Sources */,
 				97D583A71E43923700855DCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,27 +386,31 @@
 		};
 		97D583B61E43923700855DCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A3D3193B419F4EDEF642CB /* Pods-D3 - Leaderboards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3KE4G6G7E4;
 				INFOPLIST_FILE = "D3 - Leaderboards/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.D3---Leaderboards";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.d3-leaderboards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		97D583B71E43923700855DCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F249B06F5A658B72637E0532 /* Pods-D3 - Leaderboards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3KE4G6G7E4;
 				INFOPLIST_FILE = "D3 - Leaderboards/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.D3---Leaderboards";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.d3-leaderboards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -302,6 +433,7 @@
 				97D583B71E43923700855DCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

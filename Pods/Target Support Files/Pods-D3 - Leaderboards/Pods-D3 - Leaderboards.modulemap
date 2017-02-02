@@ -1,0 +1,6 @@
+framework module Pods_D3___Leaderboards {
+  umbrella header "Pods-D3 - Leaderboards-umbrella.h"
+
+  export *
+  module * { export * }
+}
