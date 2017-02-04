@@ -18,6 +18,7 @@
 		97D583B11E43923700855DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D583AF1E43923700855DCE /* LaunchScreen.storyboard */; };
 		97D583BC1E4397FB00855DCE /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583BB1E4397FB00855DCE /* HeaderView.swift */; };
 		97D583BF1E43980F00855DCE /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583BE1E43980F00855DCE /* Shadow.swift */; };
+		97ED25AD1E4540DA00AA741D /* LeaderBoardChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED25AC1E4540DA00AA741D /* LeaderBoardChar.swift */; };
 		9DB523430BA77508B77463D5 /* Pods_D3___Leaderboards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD2A67DB8F5CD879283DB97 /* Pods_D3___Leaderboards.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		97D583B21E43923700855DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D583BB1E4397FB00855DCE /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		97D583BE1E43980F00855DCE /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		97ED25AC1E4540DA00AA741D /* LeaderBoardChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardChar.swift; sourceTree = "<group>"; };
 		F249B06F5A658B72637E0532 /* Pods-D3 - Leaderboards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3 - Leaderboards.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			children = (
 				973213E01E43A65F009F5F17 /* Player.swift */,
 				973213E21E43A6B7009F5F17 /* Char.swift */,
+				97ED25AC1E4540DA00AA741D /* LeaderBoardChar.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				973213E31E43A6B7009F5F17 /* Char.swift in Sources */,
 				97D583A91E43923700855DCE /* BoardVC.swift in Sources */,
 				97D583BF1E43980F00855DCE /* Shadow.swift in Sources */,
+				97ED25AD1E4540DA00AA741D /* LeaderBoardChar.swift in Sources */,
 				97D583BC1E4397FB00855DCE /* HeaderView.swift in Sources */,
 				973213E11E43A65F009F5F17 /* Player.swift in Sources */,
 				97D583A71E43923700855DCE /* AppDelegate.swift in Sources */,
