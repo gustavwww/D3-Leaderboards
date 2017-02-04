@@ -26,4 +26,6 @@ class Constants {
     let wizard = "wizard"
     
     
+    let seasonURL = "https://eu.api.battle.net/data/d3/season/?access_token=r3vv468bdeqkpp6ddrvqtm6m"
+    
 }

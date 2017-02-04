@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dEq-uQ-cnv" id="sSL-uI-Nkp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crusaderm" translatesAutoresizingMaskIntoConstraints="NO" id="z4a-ps-ksI">
@@ -154,12 +154,55 @@
                                             <segment title="Hardcore"/>
                                         </segments>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JwH-PG-KX5"/>
+                                        </connections>
                                     </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-ve-6gV">
+                                        <rect key="frame" x="60" y="36" width="255" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR9-Fx-rIT">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="34"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Demon Hunter">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="classBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYu-rV-rAH"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tF-hr-YjZ">
+                                                <rect key="frame" x="163.5" y="0.0" width="91.5" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icO-An-f1g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="34"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-Eg-efY">
+                                                        <rect key="frame" x="61.5" y="0.0" width="30" height="34"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="seasonBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0g-WH-4q6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82331788771207959" green="0.82331788771207959" blue="0.82331788771207959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="2C3-ve-6gV" firstAttribute="top" secondItem="JoI-41-sPX" secondAttribute="bottom" id="2vw-4N-Fj3"/>
                                     <constraint firstItem="JoI-41-sPX" firstAttribute="leading" secondItem="Yg5-pU-lR5" secondAttribute="leading" constant="60" id="33y-ou-EZ7"/>
+                                    <constraint firstItem="2C3-ve-6gV" firstAttribute="trailing" secondItem="JoI-41-sPX" secondAttribute="trailing" id="NK8-w1-W9l"/>
                                     <constraint firstAttribute="trailing" secondItem="JoI-41-sPX" secondAttribute="trailing" constant="60" id="akj-Ba-Yjd"/>
+                                    <constraint firstItem="2C3-ve-6gV" firstAttribute="leading" secondItem="JoI-41-sPX" secondAttribute="leading" id="aq0-4F-Pfz"/>
+                                    <constraint firstAttribute="bottom" secondItem="2C3-ve-6gV" secondAttribute="bottom" id="f4M-1C-eLx"/>
                                     <constraint firstItem="JoI-41-sPX" firstAttribute="top" secondItem="Yg5-pU-lR5" secondAttribute="top" constant="8" id="w6Y-xu-SXD"/>
                                     <constraint firstAttribute="height" constant="70" id="yf8-Tb-N6X"/>
                                 </constraints>
@@ -172,9 +215,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU9-qy-WGy">
+                                <rect key="frame" x="0.0" y="140" width="375" height="216"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="FNX-L0-ym4"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TU9-qy-WGy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5h8-1K-eXe"/>
                             <constraint firstAttribute="trailing" secondItem="Yg5-pU-lR5" secondAttribute="trailing" id="6LY-BH-ftA"/>
                             <constraint firstItem="Yg5-pU-lR5" firstAttribute="top" secondItem="jjB-7U-3mj" secondAttribute="bottom" id="8Gk-A5-tyr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jFy-l2-9vV" secondAttribute="bottom" id="8fR-YW-Luf"/>
@@ -183,6 +234,7 @@
                             <constraint firstItem="cSD-0N-ZHq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gqx-Du-I1g"/>
                             <constraint firstAttribute="trailing" secondItem="6aS-bE-ULU" secondAttribute="trailing" id="JDJ-av-IfQ"/>
                             <constraint firstAttribute="trailing" secondItem="jFy-l2-9vV" secondAttribute="trailing" id="JNI-Tq-7UI"/>
+                            <constraint firstAttribute="trailing" secondItem="TU9-qy-WGy" secondAttribute="trailing" id="Lzx-at-pvT"/>
                             <constraint firstAttribute="trailing" secondItem="jjB-7U-3mj" secondAttribute="trailing" id="PaR-kn-YMd"/>
                             <constraint firstItem="cSD-0N-ZHq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qbu-ki-OfN"/>
                             <constraint firstItem="jjB-7U-3mj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yua-pM-Tly"/>
@@ -191,10 +243,14 @@
                             <constraint firstItem="6aS-bE-ULU" firstAttribute="top" secondItem="Yg5-pU-lR5" secondAttribute="bottom" id="kVV-IJ-3P1"/>
                             <constraint firstItem="Yg5-pU-lR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mXa-A9-oun"/>
                             <constraint firstItem="jFy-l2-9vV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tIA-xg-3Yy"/>
+                            <constraint firstItem="TU9-qy-WGy" firstAttribute="top" secondItem="Yg5-pU-lR5" secondAttribute="bottom" id="tWV-Z5-JPZ"/>
                             <constraint firstItem="jjB-7U-3mj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xHs-aM-APZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="classBtn" destination="vR9-Fx-rIT" id="FDy-oR-Y5K"/>
+                        <outlet property="pickerView" destination="TU9-qy-WGy" id="PUQ-ZW-jBh"/>
+                        <outlet property="seasonBtn" destination="fP9-Eg-efY" id="KXt-MU-BLZ"/>
                         <outlet property="segment" destination="JoI-41-sPX" id="fjC-f1-lx1"/>
                         <outlet property="tableView" destination="6aS-bE-ULU" id="No2-we-Rl8"/>
                     </connections>
