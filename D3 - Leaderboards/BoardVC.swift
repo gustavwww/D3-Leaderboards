@@ -22,7 +22,8 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     var pickerArray = [String]()
     var classArray = ["Barbarian", "Crusader", "Demon Hunter", "Monk", "Witch Doctor", "Wizard"]
-    var inClassMode: Bool = true
+    
+    var pickerInClassMode: Bool = true
     
     var currenClass = Constants.shared.barb
     
@@ -37,16 +38,18 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         tableView.delegate = self
         tableView.dataSource = self
         
-        fetchList(completed: { 
-            print("Download complete")
+        downloadSeasons()
+        
+        fetchList(completed: {
             
             self.tableView.reloadData()
             
         }, hardCore: false, classString: currenClass, season: seasonBtn.currentTitle!)
+     
         
     }
     
-    //Fetch Function
+    //Fetch Function --------------------------------------
     func fetchList(completed: @escaping () -> (), hardCore: Bool, classString: String, season: String) {
         tableCharachters = []
         tableView.reloadData()
@@ -66,7 +69,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         print(URL)
         
         Alamofire.request(URL).responseJSON { response in
-            print("Downloading...")
+            
             
             let result = response.result
             
@@ -77,7 +80,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
                     var x = 1
                     
                     for index in row { //Index of type Dict
-                        print("Looping Row")
+                        
                         var HeroClass: String = "none"
                         var HeroGender: String = "none"
                         
@@ -90,10 +93,17 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
                             if let data = player[0]["data"] as? [Dictionary<String, AnyObject>] {
                                 //Character details.
                                 
+                                if let battleTag = data[0]["string"] as? String {
+                                    
+                                    BattleTag = battleTag
+                                    
+                                    
+                                }
+                                
                                 if let heroClass = data[2]["string"] as? String {
                                     
                                     HeroClass = heroClass
-                                    print("HeroClass Downloaded \(heroClass)")
+                                    
                                 }
                                 
                                 if let heroGenger = data[3]["string"] as? String {
@@ -125,15 +135,9 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
                                 
                             }
                             
-                            if let battleTag = data[4]["string"] as? String {
-                                
-                                BattleTag = battleTag
-                                print("Battle tag downloaded")
-                            }
-                            
                             
                         }
-                        print("Creating Char Object")
+                        
                         
                         let tableChar = LeaderBoardChar(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag)
                         self.tableCharachters.append(tableChar)
@@ -150,12 +154,18 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
                     
                 }
                 
+            } else {
+                //Error Downloading Data
+                
+                
             }
             
         }
         
         
     }
+    //------------------------------------------------
+    
     
     //Table View
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -171,10 +181,9 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("Cell for row at running...")
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath) as? HeroCell {
-            print("Configuring cell..")
+            
             cell.configureCell(tableChar: tableCharachters[indexPath.row])
             
             print(tableCharachters[indexPath.row].battleTag)
@@ -226,14 +235,15 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         return isHardCore
     }
     
+    
     //Picker View
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        if inClassMode {
-            print("Returning ClassMode Count")
+        if pickerInClassMode {
+            
             return classArray.count
         }
-        print("Returning pickerArray Count")
+        
         return pickerArray.count
     }
     
@@ -244,19 +254,17 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        if inClassMode {
-            print("Returning ClassMode Row")
+        if pickerInClassMode {
+            
             return classArray[row]
         }
-        print("Returning pickerArray Row")
+        
         return pickerArray[row]
     }
     
-    
-    @IBAction func seasonBtnPressed(_ sender: UIButton) {
+    func downloadSeasons() {
         //Download Seasons
         pickerArray = []
-        pickerView.reloadAllComponents()
         
         let URL = Constants.shared.seasonURL
         
@@ -280,19 +288,17 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
                 
             }
             
-            self.pickerView.isHidden = false
-            self.inClassMode = false
-            self.pickerView.reloadAllComponents()
         }
         
     }
+    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         //Season Selection
         
-        if !inClassMode {
-            print("Did select row (NOT CLASS MODE)")
+        if !pickerInClassMode {
+            
         seasonBtn.setTitle(pickerArray[row], for: .normal)
         pickerView.isHidden = true
         
@@ -305,7 +311,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         } else {
             //Class Selector
             classBtn.setTitle(classArray[row], for: .normal)
-            var classStr = "dh"
+            var classStr = ""
             pickerView.isHidden = true
             
             switch classArray[row] {
@@ -346,10 +352,50 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
     }
     
+    @IBAction func seasonBtnPressed(_ sender: UIButton) {
+        
+        if !pickerView.isHidden {
+            pickerView.isHidden = true
+            return
+        }
+        
+        self.pickerInClassMode = false
+        self.pickerView.isHidden = false
+        self.pickerView.reloadAllComponents()
+        
+    }
+    
     @IBAction func classBtnPressed(_ sender: UIButton) {
-        inClassMode = true
+        
+        if !pickerView.isHidden {
+            pickerView.isHidden = true
+            return
+        }
+        
+        pickerInClassMode = true
         pickerView.isHidden = false
         pickerView.reloadAllComponents()
+        
+    }
+    
+    
+    
+    
+    //Segue
+    @IBAction func menuBtnPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "toMenu", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? MenuVC {
+            
+            destination.fromVC = self
+            
+        }
+        
         
     }
     

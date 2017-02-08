@@ -12,7 +12,7 @@ class Constants {
     
     static let shared = Constants()
     
-    let Base_URL = "https://eu.api.battle.net/data/d3/season/" //Season
+    let Base_URL = "https://eu.api.battle.net/data/d3/season/" //Season / rift-URL / Class / Access_Token
     let Hardcore_URL = "/leaderboard/rift-hardcore-"
     let Softcore_URL = "/leaderboard/rift-"
     
