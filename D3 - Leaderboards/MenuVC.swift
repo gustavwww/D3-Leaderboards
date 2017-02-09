@@ -14,7 +14,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var fromVC: UIViewController!
     
-    let array = ["LeaderBoards", "Player Lookup", "Settings", "Account", "EU"]
+    let list = ["LeaderBoards"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as? MenuCell {
             
-            cell.configureCell(array[indexPath.row])
+            cell.configureCell(list[indexPath.row])
             
             return cell
         }
@@ -46,10 +46,12 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
-        return array.count
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
         
         
     }
@@ -57,8 +59,33 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func exitPressed(_ sender: UIButton) {
         
-        dismiss(animated: false, completion: nil)
+        closeMenu()
         
     }
+    @IBAction func backBtn(_ sender: UIButton) {
+        
+        closeMenu()
+        
+    }
+    
+    func closeMenu() {
+        
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
+            
+            self.view.center = CGPoint(x: -screenWidth / 2, y: screenHeight / 2)
+            
+        }) { (Complete) in
+            
+            self.dismiss(animated: false, completion: nil)
+            
+        }
+        
+    }
+    
+    
+    
     
 }

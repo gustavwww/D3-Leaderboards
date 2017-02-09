@@ -19,15 +19,14 @@ class toMenuSegue: UIStoryboardSegue {
         let screenHeight = UIScreen.main.bounds.height
         let screenWidht = UIScreen.main.bounds.width
         
-        destView.center = CGPoint(x: 0 - screenWidht / 2, y: screenHeight / 2)
+        destView.center = CGPoint(x: -screenWidht / 2, y: screenHeight / 2)
         
         let window = UIApplication.shared.keyWindow
         window?.insertSubview(destView, aboveSubview: sourceView)
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
             
             destView.center = CGPoint(x: screenWidht / 2, y: screenHeight / 2)
-            
             
         }) { (Complete) in
             
