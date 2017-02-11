@@ -18,13 +18,15 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     @IBOutlet weak var seasonBtn: UIButton!
     @IBOutlet weak var classBtn: UIButton!
+    @IBOutlet weak var regionBtn: UIButton!
     
     var lbService = LBService()
     
-    
     var classArray = ["Barbarian", "Crusader", "Demon Hunter", "Monk", "Witch Doctor", "Wizard"]
+    var regionArray = ["EU", "W"]
     
     var pickerInClassMode: Bool = true
+    var pickerInRegionMode: Bool = false
     
     var currenClass = Constants.shared.barb
 
@@ -41,22 +43,33 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         lbService.downloadSeasons()
         reloadTable()
         
-        
     }
     
     func reloadTable() {
         lbService.characters = []
         tableView.reloadData()
         
-        lbService.fetchList(completed: {
+        if regionBtn.currentTitle == "EU" {
+            
+            lbService.fetchList(completed: {
+            
+            self.tableView.reloadData()
+            
+        }, hardCore: getCoreState(), classString: currenClass, season: seasonBtn.currentTitle!, region: "eu")
+            
+            
+        } else {
+            
+            lbService.fetchWorldList(completed: {
             
             self.tableView.reloadData()
             
         }, hardCore: getCoreState(), classString: currenClass, season: seasonBtn.currentTitle!)
-        
+            
+            
+        }
         
     }
-    
     
     
     //Table View
@@ -76,9 +89,10 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath) as? HeroCell {
             
-            cell.configureCell(tableChar: lbService.characters[indexPath.row])
+            let LBChar = lbService.characters[indexPath.row]
+            LBChar.rank = indexPath.row + 1
             
-            print(lbService.characters[indexPath.row].battleTag)
+            cell.configureCell(tableChar: LBChar)
             
             return cell
         }
@@ -108,6 +122,11 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     //Picker View
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
+        if pickerInRegionMode {
+            
+            return regionArray.count
+        }
+        
         if pickerInClassMode {
             
             return classArray.count
@@ -123,6 +142,11 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
+        if pickerInRegionMode {
+            
+            return regionArray[row]
+        }
+        
         if pickerInClassMode {
             
             return classArray[row]
@@ -134,20 +158,22 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        //Season Selection
-        
-        if !pickerInClassMode {
+        if pickerInRegionMode {
+            //Region Selection
             
-        
-            seasonBtn.setTitle(lbService.seasons[row], for: .normal)
-        
+            regionBtn.setTitle(regionArray[row], for: .normal)
             pickerView.isHidden = true
-            
             reloadTable()
+            
+            resetPickerView()
+            return
+        }
         
-        } else {
+        if pickerInClassMode {
             //Class Selector
+            
             classBtn.setTitle(classArray[row], for: .normal)
+            
             var classStr = ""
             pickerView.isHidden = true
             
@@ -178,26 +204,36 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             currenClass = classStr
             
             reloadTable()
-            
-        }
         
+            resetPickerView()
+            return
+        }
+        //Season Selection
+        
+        seasonBtn.setTitle(lbService.seasons[row], for: .normal)
+        
+            pickerView.isHidden = true
+            
+            reloadTable()
         
     }
     
     @IBAction func seasonBtnPressed(_ sender: UIButton) {
+        resetPickerView()
+        
         
         if !pickerView.isHidden {
             pickerView.isHidden = true
             return
         }
         
-        self.pickerInClassMode = false
         self.pickerView.isHidden = false
         self.pickerView.reloadAllComponents()
         
     }
     
     @IBAction func classBtnPressed(_ sender: UIButton) {
+        resetPickerView()
         
         if !pickerView.isHidden {
             pickerView.isHidden = true
@@ -210,6 +246,27 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
     }
     
+    @IBAction func regionBtnPressed(_ sender: UIButton) {
+        resetPickerView()
+        
+        if !pickerView.isHidden {
+            pickerView.isHidden = true
+            
+            return
+        }
+        
+        pickerInRegionMode = true
+        pickerView.isHidden = false
+        pickerView.reloadAllComponents()
+        
+    }
+    
+    func resetPickerView() {
+        
+        pickerInRegionMode = false
+        pickerInClassMode = false
+        
+    }
     
     
     

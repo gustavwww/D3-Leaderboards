@@ -17,14 +17,18 @@ class LeaderBoardChar {
     var riftLvl: Int
     var battleTag: String
     
+    var time: TimeInterval
     
-    required init(heroClass: String, gender: String, rank: Int, riftLvl: Int, battleTag: String) {
+    required init(heroClass: String, gender: String, rank: Int, riftLvl: Int, battleTag: String, timestamp: Int) {
         
         self.heroClass = heroClass
         self.heroGender = gender
         self.rank = rank
         self.riftLvl = riftLvl
         self.battleTag = battleTag
+        
+        let time = TimeInterval(timestamp)
+        self.time = time
         
     }
     

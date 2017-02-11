@@ -10,10 +10,12 @@ import Foundation
 import Alamofire
 
 class LBService {
-    
+    //Class Requires a HUGE code cleanup
     
     var characters = [LeaderBoardChar]()
     var seasons = [String]()
+    
+    var sizePerRegion = 300
     
     func downloadSeasons() {
         //Download Seasons
@@ -46,18 +48,17 @@ class LBService {
     }
     
     
-    func fetchList(completed: @escaping () -> (), hardCore: Bool, classString: String, season: String) {
-        characters = []
+    func fetchList(completed: @escaping () -> (), hardCore: Bool, classString: String, season: String, region: String) {
         
         let URL: String
         
         let const = Constants.shared
         
         if hardCore {
-            URL = const.Base_URL + season + const.Hardcore_URL + classString + const.access_token
+            URL = const.START_URL + region + const.Base_URL + season + const.Hardcore_URL + classString + const.access_token
             
         } else {
-            URL = const.Base_URL + season + const.Softcore_URL + classString + const.access_token
+            URL = const.START_URL + region + const.Base_URL + season + const.Softcore_URL + classString + const.access_token
         }
         
         print(URL)
@@ -75,12 +76,13 @@ class LBService {
                     
                     for index in row { //Index of type Dict
                         
+                        var BattleTag: String = "None"
                         var HeroClass: String = "none"
                         var HeroGender: String = "none"
                         
                         var Rank: Int = 0
                         var RiftLvl: Int = 0
-                        var BattleTag: String = "None"
+                        var RiftTime: Int = 0
                         
                         if let player = index["player"] as? [Dictionary<String, AnyObject>] {
                             
@@ -129,15 +131,21 @@ class LBService {
                                 
                             }
                             
+                            if let riftTime = data[2]["timestamp"] as? Int {
+                                
+                                RiftTime = riftTime
+                                
+                            }
+                            
                             
                         }
                         
                         
-                        let tableChar = LeaderBoardChar(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag)
+                        let tableChar = LeaderBoardChar(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag, timestamp: RiftTime)
                         self.characters.append(tableChar)
                         
                         
-                        if x >= 500 {
+                        if x >= self.sizePerRegion {
                             completed()
                             return;
                         }
@@ -156,6 +164,61 @@ class LBService {
             
         }
         
+        
+    }
+    
+    func sortList() {
+        
+        let sorted = characters.sorted { (c1, c2) -> Bool in
+            
+            if c1.riftLvl != c2.riftLvl {
+                
+                return c1.riftLvl > c2.riftLvl
+            }
+            if c1.time != c2.time {
+                
+                return c1.time < c2.time
+            }
+            
+            return false
+        }
+        characters = sorted
+        
+    }
+    
+    func fetchWorldList(completed: @escaping () -> (), hardCore: Bool, classString: String, season: String) {
+        
+        var downloadsFinished = 0
+        
+        func checkDownloads() {
+            
+            if downloadsFinished == 4 {
+                
+                sortList()
+                completed()
+            }
+        
+        }
+        
+        fetchList(completed: { 
+            downloadsFinished += 1
+            checkDownloads()
+        }, hardCore: hardCore, classString: classString, season: season, region: "eu")
+
+        fetchList(completed: { 
+            downloadsFinished += 1
+            checkDownloads()
+        }, hardCore: hardCore, classString: classString, season: season, region: "us")
+        
+        fetchList(completed: { 
+            downloadsFinished += 1
+            checkDownloads()
+        }, hardCore: hardCore, classString: classString, season: season, region: "kr")
+        
+        fetchList(completed: {
+            downloadsFinished += 1
+            checkDownloads()
+        }, hardCore: hardCore, classString: classString, season: season, region: "tw")
         
     }
     
