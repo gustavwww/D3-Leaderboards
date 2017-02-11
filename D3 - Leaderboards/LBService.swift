@@ -192,7 +192,7 @@ class LBService {
         
         func checkDownloads() {
             
-            if downloadsFinished == 4 {
+            if downloadsFinished == 3 {
                 
                 sortList()
                 completed()
@@ -214,11 +214,6 @@ class LBService {
             downloadsFinished += 1
             checkDownloads()
         }, hardCore: hardCore, classString: classString, season: season, region: "kr")
-        
-        fetchList(completed: {
-            downloadsFinished += 1
-            checkDownloads()
-        }, hardCore: hardCore, classString: classString, season: season, region: "tw")
         
     }
     
