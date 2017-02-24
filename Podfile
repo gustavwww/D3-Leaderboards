@@ -7,5 +7,7 @@ target 'D3 - Leaderboards' do
 
   # Pods for D3 - Leaderboards
   pod 'Alamofire', '~> 4.3'
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
 
 end

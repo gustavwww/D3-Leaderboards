@@ -10,10 +10,12 @@ import UIKit
 
 class HeroVC: UIViewController {
 
+    
+    var char: Char!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         
         
         

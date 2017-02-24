@@ -8,9 +8,12 @@
 
 import UIKit
 import Alamofire
+import GoogleMobileAds
 
 class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
+    
+    @IBOutlet weak var bannerView: GADBannerView!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -34,6 +37,8 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBanner()
+        
         pickerView.delegate = self
         pickerView.dataSource = self
         
@@ -42,6 +47,14 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
         lbService.downloadSeasons()
         reloadTable()
+        
+    }
+    
+    func setupBanner() {
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
     }
     
@@ -97,6 +110,13 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             return cell
         }
         return HeroCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        
+        
     }
     
     
@@ -165,7 +185,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             pickerView.isHidden = true
             reloadTable()
             
-            resetPickerView()
+            resetPickerMode()
             return
         }
         
@@ -205,7 +225,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             
             reloadTable()
         
-            resetPickerView()
+            resetPickerMode()
             return
         }
         //Season Selection
@@ -219,7 +239,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     }
     
     @IBAction func seasonBtnPressed(_ sender: UIButton) {
-        resetPickerView()
+        resetPickerMode()
         
         
         if !pickerView.isHidden {
@@ -233,7 +253,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     }
     
     @IBAction func classBtnPressed(_ sender: UIButton) {
-        resetPickerView()
+        resetPickerMode()
         
         if !pickerView.isHidden {
             pickerView.isHidden = true
@@ -247,7 +267,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     }
     
     @IBAction func regionBtnPressed(_ sender: UIButton) {
-        resetPickerView()
+        resetPickerMode()
         
         if !pickerView.isHidden {
             pickerView.isHidden = true
@@ -261,7 +281,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
     }
     
-    func resetPickerView() {
+    func resetPickerMode() {
         
         pickerInRegionMode = false
         pickerInClassMode = false
