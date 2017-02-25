@@ -114,7 +114,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        performSegue(withIdentifier: "toHero", sender: nil)
         
         
     }
@@ -302,6 +302,12 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         if let destination = segue.destination as? MenuVC {
             
             destination.fromVC = self
+            
+        }
+        
+        if let destination = segue.destination as? HeroVC {
+            //Send Character (Sender)
+            
             
         }
         

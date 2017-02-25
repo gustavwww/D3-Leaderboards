@@ -10,6 +10,15 @@ import Foundation
 
 class Char {
     
+    var isDead: Bool!
+    var isSeasonal: Bool!
     
+    private var ownerBattleTag: String!
+    
+    private var charName: String!
+    private var charLvl: Int!
+    
+    private var riftLvl: Int!
+    private var riftTime: TimeInterval!
     
 }

@@ -10,6 +10,17 @@ import UIKit
 
 class HeroVC: UIViewController {
 
+    @IBOutlet weak var battleTag: UILabel!
+    
+    @IBOutlet weak var charName: UILabel!
+    @IBOutlet weak var charLvl: UILabel!
+    @IBOutlet weak var hardcoreLbl: UILabel!
+    @IBOutlet weak var seasonalLbl: UILabel!
+    
+    @IBOutlet weak var riftLvl: UILabel!
+    @IBOutlet weak var riftTime: UILabel!
+    
+    @IBOutlet weak var isDeadLbl: UILabel!
     
     var char: Char!
     

@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class LBService {
-    //Class Requires a HUGE code cleanup
     
     var characters = [LeaderBoardChar]()
     var seasons = [String]()
