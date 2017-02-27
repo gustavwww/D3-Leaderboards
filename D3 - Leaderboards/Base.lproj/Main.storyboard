@@ -525,15 +525,80 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barbarianm-inv" translatesAutoresizingMaskIntoConstraints="NO" id="uj5-Zo-ZLF">
+                                                <rect key="frame" x="50" y="239" width="314" height="396"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="396" id="5if-de-Byf"/>
+                                                    <constraint firstAttribute="width" constant="314" id="sBT-Bb-7fT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abp-zU-dbD">
+                                                <rect key="frame" x="271" y="500" width="57" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-d4-gxi">
+                                                <rect key="frame" x="179" y="542" width="57" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-gJ-QNI">
+                                                <rect key="frame" x="85" y="500" width="57" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Lg-QF-ufw">
+                                                <rect key="frame" x="179" y="458" width="57" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-Fi-c7I">
+                                                <rect key="frame" x="177" y="427" width="63" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ce-oM-uck">
+                                                <rect key="frame" x="172" y="322" width="69" height="97"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8e-8S-sSS">
+                                                <rect key="frame" x="271" y="370" width="57" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bH-Go-Lfc">
+                                                <rect key="frame" x="85" y="370" width="57" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bl7-cB-fVp">
+                                                <rect key="frame" x="107" y="280" width="57" height="77"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J23-zA-GbN">
+                                                <rect key="frame" x="96" y="458" width="35" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-Uy-5yg">
+                                                <rect key="frame" x="282" y="458" width="35" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7b-Ce-e5u">
+                                                <rect key="frame" x="179" y="265" width="57" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjY-iU-lt2">
+                                                <rect key="frame" x="179" y="265" width="57" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iq-vH-GcK">
+                                                <rect key="frame" x="251" y="301" width="51" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.8371923575129534" green="0.8371923575129534" blue="0.8371923575129534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="qui-oJ-a2o" firstAttribute="top" secondItem="k4N-nR-Yii" secondAttribute="bottom" constant="20" id="034-NM-vAb"/>
                                             <constraint firstAttribute="trailing" secondItem="qui-oJ-a2o" secondAttribute="trailing" id="0WR-7r-NNf"/>
                                             <constraint firstItem="k4N-nR-Yii" firstAttribute="leading" secondItem="Jkk-A9-r8z" secondAttribute="leading" id="EXF-id-1ha"/>
                                             <constraint firstItem="qui-oJ-a2o" firstAttribute="leading" secondItem="Jkk-A9-r8z" secondAttribute="leading" id="Lov-dW-KlA"/>
+                                            <constraint firstItem="uj5-Zo-ZLF" firstAttribute="centerX" secondItem="Jkk-A9-r8z" secondAttribute="centerX" id="Qmf-w5-mhP"/>
                                             <constraint firstItem="k4N-nR-Yii" firstAttribute="top" secondItem="Jkk-A9-r8z" secondAttribute="top" constant="40" id="eCp-uq-8Zh"/>
                                             <constraint firstAttribute="trailing" secondItem="k4N-nR-Yii" secondAttribute="trailing" id="roc-qW-51F"/>
+                                            <constraint firstItem="uj5-Zo-ZLF" firstAttribute="top" secondItem="qui-oJ-a2o" secondAttribute="bottom" constant="10" id="uG3-bh-WiX"/>
                                             <constraint firstAttribute="height" constant="666" id="wr9-Oe-1Ap"/>
                                         </constraints>
                                     </view>
@@ -566,6 +631,7 @@
                                         </constraints>
                                         <state key="normal" image="menuCloseBtn"/>
                                         <connections>
+                                            <action selector="backPressed:" destination="wwF-un-Qbh" eventType="touchUpInside" id="5Po-18-JJi"/>
                                             <action selector="menuBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2B7-b3-PKx"/>
                                         </connections>
                                     </button>
@@ -602,7 +668,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.82502833549222798" green="0.82502833549222798" blue="0.82502833549222798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bAj-Sm-7U8" secondAttribute="trailing" id="3LV-wT-GR4"/>
                             <constraint firstAttribute="trailing" secondItem="TjJ-Rg-cQg" secondAttribute="trailing" id="a6Z-q6-xlV"/>
@@ -615,9 +681,11 @@
                     </view>
                     <connections>
                         <outlet property="battleTag" destination="XPh-nV-EZo" id="aUe-MF-uz4"/>
+                        <outlet property="charImg" destination="0Ud-wt-dxN" id="1T4-kY-wzG"/>
                         <outlet property="charLvl" destination="jiy-Cl-J6K" id="FO8-uz-EvM"/>
                         <outlet property="charName" destination="ySP-f4-aIC" id="9g8-WT-zHZ"/>
                         <outlet property="hardcoreLbl" destination="zE3-zc-Up6" id="503-dz-RjO"/>
+                        <outlet property="invImg" destination="uj5-Zo-ZLF" id="HXw-DD-UnN"/>
                         <outlet property="isDeadLbl" destination="weW-os-M0g" id="ef7-gf-G3F"/>
                         <outlet property="riftLvl" destination="vfd-2O-PCA" id="ktf-za-cuZ"/>
                         <outlet property="riftTime" destination="yLf-9P-Y9w" id="Cqz-ap-bFY"/>
@@ -626,7 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEJ-oz-j3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.17391304347836" y="138.58695652173915"/>
+            <point key="canvasLocation" x="951.5625" y="138.28125"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="oyJ-cx-Gbz">
@@ -760,6 +828,7 @@
     <resources>
         <image name="arrowBtn" width="9" height="15"/>
         <image name="barbarianm" width="224" height="242"/>
+        <image name="barbarianm-inv" width="295" height="410"/>
         <image name="bg" width="1920" height="1080"/>
         <image name="crusaderm" width="218" height="220"/>
         <image name="menuCloseBtn" width="10" height="17"/>

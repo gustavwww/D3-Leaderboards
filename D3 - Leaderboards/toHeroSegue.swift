@@ -23,7 +23,7 @@ class toHeroSegue: UIStoryboardSegue {
         let window = UIApplication.shared.keyWindow
         window?.insertSubview(destView, aboveSubview: sourceView)
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: { 
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
             
             destView.center = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
             sourceView.center = CGPoint(x: (screenWidth / 2) - 50, y: screenHeight / 2)

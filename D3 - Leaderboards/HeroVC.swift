@@ -12,8 +12,12 @@ class HeroVC: UIViewController {
 
     @IBOutlet weak var battleTag: UILabel!
     
+    @IBOutlet weak var invImg: UIImageView!
+    @IBOutlet weak var charImg: UIImageView!
+    
     @IBOutlet weak var charName: UILabel!
     @IBOutlet weak var charLvl: UILabel!
+    
     @IBOutlet weak var hardcoreLbl: UILabel!
     @IBOutlet weak var seasonalLbl: UILabel!
     
@@ -26,10 +30,24 @@ class HeroVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateUI()
+        
+    }
+    
+    func updateUI() {
+        
         
         
         
     }
 
+    @IBAction func backPressed(_ sender: UIButton) {
+        
+        dismiss(animated: false, completion: nil)
+        
+    }
+    
+    
+    
 }

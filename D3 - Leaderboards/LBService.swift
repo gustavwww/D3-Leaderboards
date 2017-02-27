@@ -11,7 +11,7 @@ import Alamofire
 
 class LBService {
     
-    var characters = [LeaderBoardChar]()
+    var characters = [Char]()
     var seasons = [String]()
     
     var sizePerRegion = 300
@@ -78,6 +78,7 @@ class LBService {
                         var BattleTag: String = "None"
                         var HeroClass: String = "none"
                         var HeroGender: String = "none"
+                        var HeroId: Int = 0
                         
                         var Rank: Int = 0
                         var RiftLvl: Int = 0
@@ -106,6 +107,17 @@ class LBService {
                                     HeroGender = heroGenger
                                     
                                 }
+                                
+                                if let heroId = data[6]["number"] as? Int {
+                                    
+                                    HeroId = heroId
+                                    
+                                } else if let heroId = data[8]["number"] as? Int {
+                                    
+                                    HeroId = heroId
+                                    
+                                }
+                                
                                 
                             }
                             
@@ -140,7 +152,7 @@ class LBService {
                         }
                         
                         
-                        let tableChar = LeaderBoardChar(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag, timestamp: RiftTime)
+                        let tableChar = Char(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag, heroId: HeroId, timestamp: RiftTime, heroRegion: region)
                         self.characters.append(tableChar)
                         
                         
@@ -174,9 +186,9 @@ class LBService {
                 
                 return c1.riftLvl > c2.riftLvl
             }
-            if c1.time != c2.time {
+            if c1.riftTime != c2.riftTime {
                 
-                return c1.time < c2.time
+                return c1.riftTime < c2.riftTime
             }
             
             return false

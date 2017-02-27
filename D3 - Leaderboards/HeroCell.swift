@@ -16,7 +16,7 @@ class HeroCell: UITableViewCell {
     @IBOutlet weak var griftLbl: UILabel!
     @IBOutlet weak var numberLbl: UILabel!
 
-    func configureCell(tableChar: LeaderBoardChar) {
+    func configureCell(tableChar: Char) {
         
         battleTag.text = tableChar.battleTag
         griftLbl.text = "Grift: \(tableChar.riftLvl)"

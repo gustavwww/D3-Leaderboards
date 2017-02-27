@@ -114,8 +114,9 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "toHero", sender: nil)
+        let char = lbService.characters[indexPath.row]
         
+        performSegue(withIdentifier: "toHero", sender: char)
         
     }
     
@@ -308,6 +309,10 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         if let destination = segue.destination as? HeroVC {
             //Send Character (Sender)
             
+            if let char = sender as? Char {
+                
+                destination.char = char
+            }
             
         }
         

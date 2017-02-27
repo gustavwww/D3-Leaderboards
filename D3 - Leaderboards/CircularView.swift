@@ -14,8 +14,8 @@ class CircularView: UIView, Shadow {
     @IBInspectable var border: Bool = false
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
         prepareView()
         
