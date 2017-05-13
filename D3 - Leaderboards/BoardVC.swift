@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import GoogleMobileAds
+import OAuthSwift
 
 class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -37,6 +38,8 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        OAuthSetup()
+        
         setupBanner()
         
         pickerView.delegate = self
@@ -47,6 +50,25 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
         lbService.downloadSeasons()
         reloadTable()
+        
+    }
+    
+    func OAuthSetup() {
+        
+        let oauthswift = OAuth2Swift(consumerKey: "v5p92v64hfnd8nmy8vjtzs2429ry5nmc", consumerSecret: "VkXvmEXAS8AdFqUkAMJzFHMEPvfFbGU4", authorizeUrl: "https://eu.battle.net/oauth/authorize", accessTokenUrl: "https://eu.battle.net/oauth/token", responseType: "code")
+        
+        oauthswift.authorize(withCallbackURL: "https://oauth.click/d3leaderboards/oauth-callback/bnet", scope: "d3.data", state: "BATTLENET", success: { (credential, response, parameters) in
+            
+            print("GUSTAV WAD " + credential.oauthToken)
+            print("GUSTAV WAD " + credential.oauthTokenSecret)
+            
+            print("Successfully worked!")
+            
+        }) { (error) in
+            print("GUSTAV WAD " + error.localizedDescription)
+            
+            print("Finaly an error message!")
+        }
         
     }
     
@@ -230,8 +252,14 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             return
         }
         //Season Selection
+        if !lbService.seasons.isEmpty {
+            
+           seasonBtn.setTitle(lbService.seasons[row], for: .normal)
+            
+        } else {
+            seasonBtn.setTitle("9", for: .normal)
+        }
         
-        seasonBtn.setTitle(lbService.seasons[row], for: .normal)
         
             pickerView.isHidden = true
             
@@ -288,7 +316,6 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         pickerInClassMode = false
         
     }
-    
     
     
     //Segue

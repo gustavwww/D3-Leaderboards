@@ -632,7 +632,6 @@
                                         <state key="normal" image="menuCloseBtn"/>
                                         <connections>
                                             <action selector="backPressed:" destination="wwF-un-Qbh" eventType="touchUpInside" id="5Po-18-JJi"/>
-                                            <action selector="menuBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2B7-b3-PKx"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLW-Nn-djx" customClass="HeaderView" customModule="D3___Leaderboards" customModuleProvider="target">

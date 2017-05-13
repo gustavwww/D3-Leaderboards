@@ -18,7 +18,7 @@ class Constants {
     let Hardcore_URL = "/leaderboard/rift-hardcore-"
     let Softcore_URL = "/leaderboard/rift-"
     
-    let access_token = "?access_token=mtw4b2z8wh5dvn29pcn53dfy"
+    let access_token = "?access_token=2ey36fsd5k67vapdx29qdhww"
     
     let barb = "barbarian"
     let crusader = "crusader"
@@ -28,7 +28,7 @@ class Constants {
     let wizard = "wizard"
     
     
-    let seasonURL = "https://eu.api.battle.net/data/d3/season/?access_token=r3vv468bdeqkpp6ddrvqtm6m"
+    let seasonURL = "https://eu.api.battle.net/data/d3/season/?access_token=2ey36fsd5k67vapdx29qdhww"
     
     
 }

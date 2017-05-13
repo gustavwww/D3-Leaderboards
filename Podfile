@@ -9,5 +9,7 @@ target 'D3 - Leaderboards' do
   pod 'Alamofire', '~> 4.3'
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
+  
+  pod 'OAuthSwift', '~> 1.1.0'
 
 end
