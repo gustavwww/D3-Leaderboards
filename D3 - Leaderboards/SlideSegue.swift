@@ -8,7 +8,7 @@
 
 import UIKit
 
-class toHeroSegue: UIStoryboardSegue {
+class SlideSegue: UIStoryboardSegue {
 
     override func perform() {
         

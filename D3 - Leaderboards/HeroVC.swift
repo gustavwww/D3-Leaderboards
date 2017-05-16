@@ -37,17 +37,21 @@ class HeroVC: UIViewController {
     
     func updateUI() {
         
+        battleTag.text = char.battleTag
+        riftLvl.text = "\(char.riftLvl)"
+        riftTime.text = char.riftTime.toString()
         
+        charImg.image = UIImage(named: char.heroClass + char.heroGender)
+        invImg.image = UIImage(named: char.heroClass + char.heroGender + "-inv")
         
-        
-    }
-
-    @IBAction func backPressed(_ sender: UIButton) {
-        
-        dismiss(animated: false, completion: nil)
         
     }
     
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        print("back pressed")
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     
 }

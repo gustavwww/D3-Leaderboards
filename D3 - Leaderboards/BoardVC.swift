@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import GoogleMobileAds
-import OAuthSwift
 
 class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -33,12 +32,9 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     var pickerInRegionMode: Bool = false
     
     var currenClass = Constants.shared.barb
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        OAuthSetup()
         
         setupBanner()
         
@@ -48,33 +44,16 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         tableView.delegate = self
         tableView.dataSource = self
         
+        toggleInteract(enabled: false)
         lbService.downloadSeasons()
         reloadTable()
         
     }
-    
-    func OAuthSetup() {
-        
-        let oauthswift = OAuth2Swift(consumerKey: "v5p92v64hfnd8nmy8vjtzs2429ry5nmc", consumerSecret: "VkXvmEXAS8AdFqUkAMJzFHMEPvfFbGU4", authorizeUrl: "https://eu.battle.net/oauth/authorize", accessTokenUrl: "https://eu.battle.net/oauth/token", responseType: "code")
-        
-        oauthswift.authorize(withCallbackURL: "https://oauth.click/d3leaderboards/oauth-callback/bnet", scope: "d3.data", state: "BATTLENET", success: { (credential, response, parameters) in
-            
-            print("GUSTAV WAD " + credential.oauthToken)
-            print("GUSTAV WAD " + credential.oauthTokenSecret)
-            
-            print("Successfully worked!")
-            
-        }) { (error) in
-            print("GUSTAV WAD " + error.localizedDescription)
-            
-            print("Finaly an error message!")
-        }
-        
-    }
+
     
     func setupBanner() {
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //"ca-app-pub-3305261733368372/7332501643"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
@@ -89,7 +68,8 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             lbService.fetchList(completed: {
             
             self.tableView.reloadData()
-            
+            self.toggleInteract(enabled: true)
+                
         }, hardCore: getCoreState(), classString: currenClass, season: seasonBtn.currentTitle!, region: "eu")
             
             
@@ -98,12 +78,39 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             lbService.fetchWorldList(completed: {
             
             self.tableView.reloadData()
-            
+            self.toggleInteract(enabled: true)
+                
         }, hardCore: getCoreState(), classString: currenClass, season: seasonBtn.currentTitle!)
             
             
         }
         
+    }
+    
+    func toggleInteract(enabled: Bool) {
+        
+        if enabled {
+            //Board has stopped Loading
+            seasonBtn.isEnabled = true
+            classBtn.isEnabled = true
+            regionBtn.isEnabled = true
+            segment.isEnabled = true
+            
+            tableView.isScrollEnabled = true
+            
+            
+        } else {
+            //Board is Loading
+            seasonBtn.isEnabled = false
+            classBtn.isEnabled = false
+            regionBtn.isEnabled = false
+            segment.isEnabled = false
+            
+            tableView.scrollsToTop = true
+            tableView.isScrollEnabled = false
+            
+            
+        }
     }
     
     
@@ -145,7 +152,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     //Segment
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
-        
+        toggleInteract(enabled: false)
         reloadTable()
         
     }
@@ -206,6 +213,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             
             regionBtn.setTitle(regionArray[row], for: .normal)
             pickerView.isHidden = true
+            toggleInteract(enabled: false)
             reloadTable()
             
             resetPickerMode()
@@ -245,7 +253,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             }
             
             currenClass = classStr
-            
+            toggleInteract(enabled: false)
             reloadTable()
         
             resetPickerMode()
@@ -262,7 +270,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
         
             pickerView.isHidden = true
-            
+            toggleInteract(enabled: false)
             reloadTable()
         
     }

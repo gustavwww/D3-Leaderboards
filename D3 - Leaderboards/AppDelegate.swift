@@ -49,9 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        if (url.host == "https://oauth.click") {
-            OAuthSwift.handle(url: url)
-        }
+        OAuthSwift.handle(url: url)
+        
         return true
         
     }

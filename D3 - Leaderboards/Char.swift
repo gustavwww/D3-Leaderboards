@@ -23,7 +23,7 @@ class Char {
     
 
     
-    //Downloadable Properties
+    //Downloadable Properties - DO NOT USE THESE - NOT YET DOWNLOADED!!
     var isDead: Bool = false
     var isSeasonal: Bool = false
     

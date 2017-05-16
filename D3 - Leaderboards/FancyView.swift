@@ -55,7 +55,7 @@ class FancyView: UIView, Shadow {
     @IBInspectable var rotation: Double = 0 {
         
         didSet {
-            let transformation = CGAffineTransform(rotationAngle: CGFloat(M_PI * (rotation/180)))
+            let transformation = CGAffineTransform(rotationAngle: CGFloat(.pi * (rotation/180)))
             transform = transformation
         }
         
