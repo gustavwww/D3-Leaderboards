@@ -89,32 +89,48 @@ class LBService {
                             if let data = player[0]["data"] as? [Dictionary<String, AnyObject>] {
                                 //Character details.
                                 
-                                if let battleTag = data[0]["string"] as? String {
-                                    
-                                    BattleTag = battleTag
+                                for x in data {
                                     
                                     
-                                }
-                                
-                                if let heroClass = data[2]["string"] as? String {
+                                    if x["id"] as? String == "HeroBattleTag" {
+                                        
+                                        if let battleTag = x["string"] as? String {
+                                            
+                                            BattleTag = battleTag
+                                            
+                                        }
+                                        
+                                    }
                                     
-                                    HeroClass = heroClass
+                                    if x["id"] as? String == "HeroClass" {
+                                        
+                                        if let heroClass = x["string"] as? String {
+                                            
+                                            HeroClass = heroClass
+                                            
+                                        }
+                                        
+                                    }
                                     
-                                }
-                                
-                                if let heroGenger = data[3]["string"] as? String {
+                                    if x["id"] as? String == "HeroGender" {
+                                        
+                                        if let heroGenger = x["string"] as? String {
+                                            
+                                            HeroGender = heroGenger
+                                            
+                                        }
+                                        
+                                    }
                                     
-                                    HeroGender = heroGenger
-                                    
-                                }
-                                
-                                if let heroId = data[6]["number"] as? Int {
-                                    
-                                    HeroId = heroId
-                                    
-                                } else if let heroId = data[8]["number"] as? Int {
-                                    
-                                    HeroId = heroId
+                                    if x["id"] as? String == "HeroId" {
+                                        
+                                        if let heroId = x["number"] as? Int {
+                                            
+                                            HeroId = heroId
+                                            
+                                        }
+                                        
+                                    }
                                     
                                 }
                                 
@@ -127,24 +143,40 @@ class LBService {
                         if let data = index["data"] as? [Dictionary<String, AnyObject>] {
                             //Data x Found
                             
-                            //Rank, Rift level, BattleTag
+                            //Rank, Rift-Level, Rift-Time
                             //Placement details
                             
-                            if let rank = data[0]["number"] as? Int {
+                            for x in data {
                                 
-                                Rank = rank
+                                if x["id"] as? String == "Rank" {
+                                    
+                                    if let rank = x["number"] as? Int {
+                                        
+                                        Rank = rank
+                                        
+                                    }
+                                    
+                                }
                                 
-                            }
-                            
-                            if let riftLvl = data[1]["number"] as? Int {
+                                if x["id"] as? String == "RiftLevel" {
+                                    
+                                    if let riftLvl = x["number"] as? Int {
+                                        
+                                        RiftLvl = riftLvl
+                                        
+                                    }
+                                    
+                                }
                                 
-                                RiftLvl = riftLvl
-                                
-                            }
-                            
-                            if let riftTime = data[2]["timestamp"] as? Int {
-                                
-                                RiftTime = riftTime
+                                if x["id"] as? String == "RiftTime" {
+                                    
+                                    if let riftTime = x["timestamp"] as? Int {
+                                        
+                                        RiftTime = riftTime
+                                        
+                                    }
+                                    
+                                }
                                 
                             }
                             
@@ -168,7 +200,7 @@ class LBService {
                 }
                 
             } else {
-                //Error Downloading Data
+                //Error Downloading Data - Handle
                 
                 
             }
