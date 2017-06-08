@@ -17,6 +17,7 @@ class HeroVC: UIViewController {
     
     @IBOutlet weak var charName: UILabel!
     @IBOutlet weak var charLvl: UILabel!
+    @IBOutlet weak var charParLvl: UILabel!
     
     @IBOutlet weak var hardcoreLbl: UILabel!
     @IBOutlet weak var seasonalLbl: UILabel!
@@ -31,7 +32,16 @@ class HeroVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateUI()
+        char.downloadDetails(Completed: { //Can't load Hardcore Heroes?
+            
+            print("Char details successfully downloaded")
+            self.updateUI()
+            
+        }) {
+            
+            print("Char details failed to downlaod")
+            
+        }
         
     }
     
@@ -43,6 +53,22 @@ class HeroVC: UIViewController {
         
         charImg.image = UIImage(named: char.heroClass + char.heroGender)
         invImg.image = UIImage(named: char.heroClass + char.heroGender + "-inv")
+        
+        charName.text = char.charName
+        charLvl.text = "\(char.charLvl)"
+        charParLvl.text = "\(char.charParLvl)"
+        
+        if char.isDead {
+            isDeadLbl.isEnabled = true
+        }
+        
+        if char.isHardCore {
+            hardcoreLbl.text = "Yes"
+        }
+        
+        if char.isSeasonal {
+            seasonalLbl.text = "Yes"
+        }
         
         
     }

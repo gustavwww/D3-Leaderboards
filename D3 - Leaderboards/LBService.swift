@@ -184,7 +184,7 @@ class LBService {
                         }
                         
                         
-                        let tableChar = Char(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag, heroId: HeroId, timestamp: RiftTime, heroRegion: region)
+                        let tableChar = Char(heroClass: HeroClass, gender: HeroGender, rank: Rank, riftLvl: RiftLvl, battleTag: BattleTag, heroId: HeroId, timestamp: RiftTime, heroRegion: region, hardCore: hardCore)
                         self.characters.append(tableChar)
                         
                         
@@ -198,10 +198,6 @@ class LBService {
                     
                     
                 }
-                
-            } else {
-                //Error Downloading Data - Handle
-                
                 
             }
             

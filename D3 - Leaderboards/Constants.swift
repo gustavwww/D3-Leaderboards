@@ -12,6 +12,8 @@ class Constants {
     
     static let shared = Constants()
     
+    let API_KEY = "&apikey=v5p92v64hfnd8nmy8vjtzs2429ry5nmc"
+    
     let START_URL = "https://" //Region
     
     let Base_URL = ".api.battle.net/data/d3/season/" //Season / rift-URL / Class / Access_Token
@@ -30,6 +32,13 @@ class Constants {
     
     
     var seasonURL = "https://eu.api.battle.net/data/d3/season/"
+    
+    
+    //Char Download Constants
+    
+    let Char_Base_URL = ".api.battle.net/d3/profile/" //BattleTag / hero-URL / HeroId / locale-URL / API_KEY
+    let Hero_URL = "/hero/"
+    let Locale_URL = "?locale=en_GB"
     
     
 }
