@@ -80,7 +80,7 @@ class Char {
     }
     
     
-    func downloadDetails(Completed: @escaping () -> (), Failed: @escaping () -> ()) {
+    func downloadDetails(completed: @escaping () -> (), failed: @escaping () -> ()) {
         //Item Details, CharName, CharLvl, etc
         
         let const = Constants.shared
@@ -94,7 +94,7 @@ class Char {
             
             if result.error != nil {
                 //Error Downloading data
-                Failed()
+                failed()
             }
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
@@ -106,7 +106,7 @@ class Char {
                     
                 } else {
                     //Error Downloading data
-                    Failed()
+                    failed()
                 }
                 
                 if let lvl = dict["level"] as? Int {
@@ -177,7 +177,7 @@ class Char {
                         
                         if itemsCounted == 13 {
                             
-                            Completed()
+                            completed()
                             return
                         }
                         

@@ -15,6 +15,7 @@ class AuthVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var regionBtn: FancyBtn!
+    @IBOutlet weak var errorMsg: UILabel!
     
     let regions = ["EU", "US", "KR", "TW"]
     var currentSelectedRegion = "eu"
@@ -48,17 +49,20 @@ class AuthVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBAction func authBtnPressed(_ sender: FancyBtn) {
         
+        errorMsg.isHidden = true
+        
         tokenGen.setup(region: currentSelectedRegion)
         tokenGen.authorize(completed: { 
             
             //Success - Transport to BoardVC
             self.performSegue(withIdentifier: "toBoardVC", sender: nil)
             
-        }) { 
-            //Failure
+        }, failed: {
+            //Failure - Failure Message
             
+            self.errorMsg.isHidden = false
             
-        }
+        })
         
     }
     

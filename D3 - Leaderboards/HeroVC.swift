@@ -32,16 +32,16 @@ class HeroVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        char.downloadDetails(Completed: { //Can't load Hardcore Heroes?
+        char.downloadDetails(completed: { //Can't load Hardcore Heroes?
             
             print("Char details successfully downloaded")
             self.updateUI()
             
-        }) {
+        }, failed: {
             
             print("Char details failed to downlaod")
             
-        }
+        })
         
     }
     
@@ -73,9 +73,19 @@ class HeroVC: UIViewController {
         
     }
     
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        print("back pressed")
-        dismiss(animated: true, completion: nil)
+    
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        
+        print("Executed")
+        
+    }
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         
     }
     

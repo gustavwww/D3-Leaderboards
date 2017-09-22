@@ -14,9 +14,7 @@
 		971198221ECB7BA90036A8B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971198211ECB7BA90036A8B0 /* Extensions.swift */; };
 		972D27F31EE3672700BC15E1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D27F21EE3672700BC15E1 /* Item.swift */; };
 		973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213DE1E43A49C009F5F17 /* HeroCell.swift */; };
-		973213E11E43A65F009F5F17 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213E01E43A65F009F5F17 /* Player.swift */; };
 		973307951E4A4D9D0070443E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973307941E4A4D9D0070443E /* MenuVC.swift */; };
-		973307971E4A50C50070443E /* toMenuSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973307961E4A50C50070443E /* toMenuSegue.swift */; };
 		973F0FBE1E4B7D4C00EBE598 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */; };
 		975B41491E60E9AF00A6CA80 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B41481E60E9AF00A6CA80 /* FancyView.swift */; };
 		975D36851E4CE9D2000A20D4 /* LBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D36841E4CE9D2000A20D4 /* LBService.swift */; };
@@ -45,9 +43,7 @@
 		971198211ECB7BA90036A8B0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		972D27F21EE3672700BC15E1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		973213DE1E43A49C009F5F17 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
-		973213E01E43A65F009F5F17 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		973307941E4A4D9D0070443E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		973307961E4A50C50070443E /* toMenuSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toMenuSegue.swift; sourceTree = "<group>"; };
 		973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		975B41481E60E9AF00A6CA80 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		975D36841E4CE9D2000A20D4 /* LBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBService.swift; sourceTree = "<group>"; };
@@ -151,7 +147,6 @@
 			children = (
 				97D583BB1E4397FB00855DCE /* HeaderView.swift */,
 				973213DE1E43A49C009F5F17 /* HeroCell.swift */,
-				973307961E4A50C50070443E /* toMenuSegue.swift */,
 				973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */,
 				970D62071E51ED2F0081103D /* SlideSegue.swift */,
 				970D620C1E51F48A0081103D /* CircularView.swift */,
@@ -164,7 +159,6 @@
 		97D583BA1E4397E800855DCE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				973213E01E43A65F009F5F17 /* Player.swift */,
 				97ED25AC1E4540DA00AA741D /* Char.swift */,
 				972D27F21EE3672700BC15E1 /* Item.swift */,
 			);
@@ -218,12 +212,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Gustav Wadström";
 				TargetAttributes = {
 					97D583A21E43923700855DCE = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3KE4G6G7E4;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -319,7 +314,6 @@
 				97D583A91E43923700855DCE /* BoardVC.swift in Sources */,
 				972D27F31EE3672700BC15E1 /* Item.swift in Sources */,
 				9766A5D81EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift in Sources */,
-				973307971E4A50C50070443E /* toMenuSegue.swift in Sources */,
 				975D36871E4D0D87000A20D4 /* HeroVC.swift in Sources */,
 				97D583BF1E43980F00855DCE /* Shadow.swift in Sources */,
 				97ED25AD1E4540DA00AA741D /* Char.swift in Sources */,
@@ -327,7 +321,6 @@
 				9766A5DA1EC9D33900C8ABD6 /* AuthVC.swift in Sources */,
 				97D583BC1E4397FB00855DCE /* HeaderView.swift in Sources */,
 				975B41491E60E9AF00A6CA80 /* FancyView.swift in Sources */,
-				973213E11E43A65F009F5F17 /* Player.swift in Sources */,
 				97D583A71E43923700855DCE /* AppDelegate.swift in Sources */,
 				971198221ECB7BA90036A8B0 /* Extensions.swift in Sources */,
 				970D620D1E51F48A0081103D /* CircularView.swift in Sources */,
@@ -368,7 +361,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -376,7 +371,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -418,7 +417,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -426,7 +427,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -462,7 +467,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.d3-leaderboards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -477,7 +483,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.d3-leaderboards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
