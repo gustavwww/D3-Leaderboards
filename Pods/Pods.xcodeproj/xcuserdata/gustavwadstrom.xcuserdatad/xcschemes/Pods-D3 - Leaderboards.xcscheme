@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D60035C18140C86D5F1D8E367F4D6A9"
+               BlueprintIdentifier = "0208060C6F82C6A3CF71EE646FEC0BE7"
                BuildableName = "Pods_D3___Leaderboards.framework"
                BlueprintName = "Pods-D3 - Leaderboards"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D60035C18140C86D5F1D8E367F4D6A9"
+            BlueprintIdentifier = "0208060C6F82C6A3CF71EE646FEC0BE7"
             BuildableName = "Pods_D3___Leaderboards.framework"
             BlueprintName = "Pods-D3 - Leaderboards"
             ReferencedContainer = "container:Pods.xcodeproj">
