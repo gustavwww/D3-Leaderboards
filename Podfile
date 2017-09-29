@@ -6,7 +6,7 @@ target 'D3 - Leaderboards' do
   use_frameworks!
 
   # Pods for D3 - Leaderboards
-  pod 'Alamofire', '~> 4.3'
+  pod 'Alamofire', '~> 4.5'
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
   
