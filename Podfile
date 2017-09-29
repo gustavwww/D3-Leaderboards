@@ -10,6 +10,6 @@ target 'D3 - Leaderboards' do
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
   
-  pod 'OAuthSwift', '~> 1.1.0'
+  pod 'OAuthSwift', '~> 1.2.0'
 
 end

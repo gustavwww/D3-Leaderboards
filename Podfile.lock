@@ -24,13 +24,13 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - OAuthSwift (1.1.2)
+  - OAuthSwift (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - Firebase/AdMob
   - Firebase/Core
-  - OAuthSwift (~> 1.1.0)
+  - OAuthSwift (~> 1.2.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -41,8 +41,8 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: f405b7acb098fe89e6fcd05fdbf400c1a5bcb935
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  OAuthSwift: 5aa5659984d3ca3206ba636a9e7a9c6626b2e8bd
+  OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
 
-PODFILE CHECKSUM: 6d8daeeb8c0eddf065f77bef399d4507033c96e4
+PODFILE CHECKSUM: f2a978aa685db78441690e6ffdd984194b3293b5
 
 COCOAPODS: 1.2.0
