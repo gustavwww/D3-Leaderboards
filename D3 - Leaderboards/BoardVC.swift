@@ -145,7 +145,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
         let char = lbService.characters[indexPath.row]
         
-        performSegue(withIdentifier: "toHero", sender: char)
+        performSegue(withIdentifier: "toHeroVC", sender: char)
         
     }
     
@@ -327,11 +327,6 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     
     //Segue
-    @IBAction func menuBtnPressed(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "toMenu", sender: nil)
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

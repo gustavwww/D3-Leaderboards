@@ -146,7 +146,7 @@ class Char {
                         var name = ""
                         var color = ""
                         var itemId = ""
-                        
+                        var icon = ""
                         
                         
                         for x in item.value {
@@ -163,6 +163,11 @@ class Char {
                                 
                             case "displayColor":
                                 color = x.value as! String
+                                break;
+                                
+                            case "icon":
+                                icon = x.value as! String
+                                break;
                                 
                             default:
                                 //Do Nothing - Default Values
@@ -172,7 +177,7 @@ class Char {
                             
                         }
                         
-                        let item = Item(itemType: itemType, name: name, color: color, itemId: itemId)
+                        let item = Item(itemType: itemType, name: name, color: color, itemId: itemId, icon: icon)
                         self.items.append(item)
                         
                         if itemsCounted == 13 {

@@ -29,10 +29,9 @@ class SlideSegue: UIStoryboardSegue {
             sourceView.center = CGPoint(x: (screenWidth / 2) - 50, y: screenHeight / 2)
             
             
-        }) { (Complete) in
+        }) { (Complete) in //Broken
             
             _ = self.source.navigationController?.popToViewController(self.destination, animated: false)
-            
         }
         
     }

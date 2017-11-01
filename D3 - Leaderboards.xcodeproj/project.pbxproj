@@ -22,6 +22,7 @@
 		9766A5D81EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766A5D71EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift */; };
 		9766A5DA1EC9D33900C8ABD6 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */; };
 		976D3E481E43AC6A00301F7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976D3E471E43AC6A00301F7A /* Constants.swift */; };
+		977398C41FAA231A00E5D46A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977398C31FAA231A00E5D46A /* TestVC.swift */; };
 		97D583A71E43923700855DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A61E43923700855DCE /* AppDelegate.swift */; };
 		97D583A91E43923700855DCE /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A81E43923700855DCE /* BoardVC.swift */; };
 		97D583AC1E43923700855DCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D583AA1E43923700855DCE /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		9766A5D71EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthTokenGenerator.swift; sourceTree = "<group>"; };
 		9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		976D3E471E43AC6A00301F7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		977398C31FAA231A00E5D46A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		97D583A31E43923700855DCE /* D3 - Leaderboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D3 - Leaderboards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D583A61E43923700855DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D583A81E43923700855DCE /* BoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				973307941E4A4D9D0070443E /* MenuVC.swift */,
 				975D36861E4D0D87000A20D4 /* HeroVC.swift */,
 				9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */,
+				977398C31FAA231A00E5D46A /* TestVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977398C41FAA231A00E5D46A /* TestVC.swift in Sources */,
 				973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */,
 				973F0FBE1E4B7D4C00EBE598 /* MenuCell.swift in Sources */,
 				975D36851E4CE9D2000A20D4 /* LBService.swift in Sources */,
@@ -398,12 +402,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -448,10 +453,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -467,7 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.d3-leaderboards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,7 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gustavwww.d3-leaderboards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
