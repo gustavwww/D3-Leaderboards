@@ -31,6 +31,8 @@ class HeroVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initItemSlots(contentMode: .scaleAspectFill)
 
         char.downloadDetails(completed: { //Can't load some Heroes?
 
@@ -40,7 +42,7 @@ class HeroVC: UIViewController {
         }, failed: {
 
             print("Char details failed to downlaod")
-
+            self.updateUI()
         })
 
     }
@@ -101,58 +103,71 @@ class HeroVC: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    switch item.itemType { //Items getting blue - WORK ON THIS <<< BckgroundImg?
+                    switch item.itemType { //Items getting blue - WORK ON THIS <<< BckgroundImg? Aspect Fit?
                         
                     case "head":
                         self.head.setImage(img, for: .normal)
+                        self.head.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "neck":
                         self.neck.setImage(img, for: .normal)
+                        self.neck.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "shoulders":
                         self.shoulders.setImage(img, for: .normal)
+                        self.shoulders.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "torso":
                         self.torso.setImage(img, for: .normal)
+                        self.torso.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "hands":
                         self.hands.setImage(img, for: .normal)
+                        self.hands.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "bracers":
                         self.bracers.setImage(img, for: .normal)
+                        self.bracers.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "waist":
                         self.waist.setImage(img, for: .normal)
+                        self.waist.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "legs":
                         self.legs.setImage(img, for: .normal)
+                        self.legs.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "feet":
                         self.feet.setImage(img, for: .normal)
+                        self.feet.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "leftFinger":
                         self.leftFinger.setImage(img, for: .normal)
+                        self.leftFinger.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "rightFinger":
                         self.rightFinger.setImage(img, for: .normal)
+                        self.rightFinger.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "mainHand":
                         self.mainHand.setImage(img, for: .normal)
+                        self.mainHand.setBackgroundColor(colorString: item.color)
                         break;
                         
                     case "offHand":
                         self.offHand.setImage(img, for: .normal)
+                        self.offHand.setBackgroundColor(colorString: item.color)
                         break;
                         
                         
@@ -172,7 +187,24 @@ class HeroVC: UIViewController {
             })
             
         }
+    }
+    
+    func initItemSlots(contentMode: UIViewContentMode) {
         
+        
+        head.imageView?.contentMode = contentMode
+        neck.imageView?.contentMode = contentMode
+        shoulders.imageView?.contentMode = contentMode
+        torso.imageView?.contentMode = contentMode
+        hands.imageView?.contentMode = contentMode
+        bracers.imageView?.contentMode = contentMode
+        waist.imageView?.contentMode = contentMode
+        legs.imageView?.contentMode = contentMode
+        feet.imageView?.contentMode = contentMode
+        leftFinger.imageView?.contentMode = contentMode
+        rightFinger.imageView?.contentMode = contentMode
+        mainHand.imageView?.contentMode = contentMode
+        offHand.imageView?.contentMode = contentMode
         
         
     }
@@ -180,8 +212,7 @@ class HeroVC: UIViewController {
     
     @IBAction func backPressed(_ sender: UIButton) {
         print("Pressed")
-        navigationController?.popViewController(animated: true)
-        
+        dismiss(animated: true, completion: nil)
     }
     
     

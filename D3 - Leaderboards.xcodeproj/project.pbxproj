@@ -16,13 +16,14 @@
 		973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213DE1E43A49C009F5F17 /* HeroCell.swift */; };
 		973307951E4A4D9D0070443E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973307941E4A4D9D0070443E /* MenuVC.swift */; };
 		973F0FBE1E4B7D4C00EBE598 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */; };
+		974278DD1FAC95DE0010C779 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974278DC1FAC95DE0010C779 /* ItemVC.swift */; };
+		974278DF1FAC973A0010C779 /* BackgroundColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974278DE1FAC973A0010C779 /* BackgroundColorExtension.swift */; };
 		975B41491E60E9AF00A6CA80 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B41481E60E9AF00A6CA80 /* FancyView.swift */; };
 		975D36851E4CE9D2000A20D4 /* LBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D36841E4CE9D2000A20D4 /* LBService.swift */; };
 		975D36871E4D0D87000A20D4 /* HeroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D36861E4D0D87000A20D4 /* HeroVC.swift */; };
 		9766A5D81EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766A5D71EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift */; };
 		9766A5DA1EC9D33900C8ABD6 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */; };
 		976D3E481E43AC6A00301F7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976D3E471E43AC6A00301F7A /* Constants.swift */; };
-		977398C41FAA231A00E5D46A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977398C31FAA231A00E5D46A /* TestVC.swift */; };
 		97D583A71E43923700855DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A61E43923700855DCE /* AppDelegate.swift */; };
 		97D583A91E43923700855DCE /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D583A81E43923700855DCE /* BoardVC.swift */; };
 		97D583AC1E43923700855DCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D583AA1E43923700855DCE /* Main.storyboard */; };
@@ -46,13 +47,14 @@
 		973213DE1E43A49C009F5F17 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		973307941E4A4D9D0070443E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		974278DC1FAC95DE0010C779 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
+		974278DE1FAC973A0010C779 /* BackgroundColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorExtension.swift; sourceTree = "<group>"; };
 		975B41481E60E9AF00A6CA80 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		975D36841E4CE9D2000A20D4 /* LBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBService.swift; sourceTree = "<group>"; };
 		975D36861E4D0D87000A20D4 /* HeroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroVC.swift; sourceTree = "<group>"; };
 		9766A5D71EC9CB4000C8ABD6 /* OAuthTokenGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthTokenGenerator.swift; sourceTree = "<group>"; };
 		9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		976D3E471E43AC6A00301F7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		977398C31FAA231A00E5D46A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		97D583A31E43923700855DCE /* D3 - Leaderboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D3 - Leaderboards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D583A61E43923700855DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D583A81E43923700855DCE /* BoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 				973307941E4A4D9D0070443E /* MenuVC.swift */,
 				975D36861E4D0D87000A20D4 /* HeroVC.swift */,
 				9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */,
-				977398C31FAA231A00E5D46A /* TestVC.swift */,
+				974278DC1FAC95DE0010C779 /* ItemVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -173,6 +175,7 @@
 			children = (
 				97D583BE1E43980F00855DCE /* Shadow.swift */,
 				971198211ECB7BA90036A8B0 /* Extensions.swift */,
+				974278DE1FAC973A0010C779 /* BackgroundColorExtension.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -311,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				977398C41FAA231A00E5D46A /* TestVC.swift in Sources */,
 				973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */,
 				973F0FBE1E4B7D4C00EBE598 /* MenuCell.swift in Sources */,
 				975D36851E4CE9D2000A20D4 /* LBService.swift in Sources */,
@@ -329,8 +331,10 @@
 				971198221ECB7BA90036A8B0 /* Extensions.swift in Sources */,
 				970D620D1E51F48A0081103D /* CircularView.swift in Sources */,
 				976D3E481E43AC6A00301F7A /* Constants.swift in Sources */,
+				974278DF1FAC973A0010C779 /* BackgroundColorExtension.swift in Sources */,
 				973307951E4A4D9D0070443E /* MenuVC.swift in Sources */,
 				9711981E1ECB2F4A0036A8B0 /* FancyBtn.swift in Sources */,
+				974278DD1FAC95DE0010C779 /* ItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

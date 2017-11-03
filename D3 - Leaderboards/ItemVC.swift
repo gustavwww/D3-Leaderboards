@@ -1,21 +1,23 @@
 //
-//  TestVC.swift
+//  ItemVC.swift
 //  D3 - Leaderboards
 //
-//  Created by Gustav Wadström on 2017-11-01.
+//  Created by Gustav Wadström on 2017-11-03.
 //  Copyright © 2017 Gustav Wadström. All rights reserved.
 //
 
 import UIKit
 
-class TestVC: UIViewController {
+class ItemVC: UIViewController {
 
+    @IBOutlet weak var itemView: UIView!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         
         
     }
-    
+
 }

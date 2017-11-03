@@ -28,7 +28,7 @@ class Char {
     var items = [Item]()
     
     
-    //Downloadable Properties - DO NOT USE THESE - Working on Download!!
+    //Downloadable Properties
     var isDead: Bool = false
     var isSeasonal: Bool = false
     
@@ -39,7 +39,7 @@ class Char {
     var charName: String {
         if _charLvl == nil {
             
-            _charName = ""
+            _charName = "Unknown"
         }
         
         return _charName
@@ -94,18 +94,23 @@ class Char {
             
             if result.error != nil {
                 //Error Downloading data
+                print("Error: " + result.error.debugDescription)
                 failed()
             }
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 print("Dict Found")
+                print(self.battleTag)
+                print(self.heroId)
                 //Main Details
                 if let name = dict["name"] as? String {
                     
                     self._charName = name
                     
                 } else {
-                    //Error Downloading data
+                    //Error Downloading data - Character could not be found, might be deleted.
+                    print(self.battleTag)
+                    print(self.heroId)
                     failed()
                 }
                 
@@ -115,8 +120,8 @@ class Char {
                     
                 }
                 
-                if let parLvl = dict["paragonLevel"] as? Int {
-                    
+                if let parLvl = dict["paragonLevel"] as? Int { //Can't be found
+                    print("GUSTAV: Found paragonLevel")
                     self._charParLvl = parLvl
                     
                 }
@@ -135,13 +140,13 @@ class Char {
                 
                 //Item Fetching
                 
-                if let items = dict["items"] as? Dictionary<String, Dictionary<String, AnyObject>> {
-                    
+                if let items = dict["items"] as? Dictionary<String, Dictionary<String, AnyObject>> { //Something wrong here... Not working for some characters.
+                    print("Items dict found")
                     var itemsCounted = 1
                     
                     //Looping Items
                     for item in items {
-                        
+                        print(item.key)
                         let itemType = item.key
                         var name = ""
                         var color = ""
@@ -167,10 +172,13 @@ class Char {
                                 
                             case "icon":
                                 icon = x.value as! String
+                                print(x.key)
                                 break;
                                 
                             default:
-                                //Do Nothing - Default Values
+                                //Do a second try? - Default Values?
+                                print("ITEM FETCHING: couldn't find icon, displaycolor, name etc.")
+                                print(x.key)
                                 break;
                                 
                             }
@@ -180,13 +188,13 @@ class Char {
                         let item = Item(itemType: itemType, name: name, color: color, itemId: itemId, icon: icon)
                         self.items.append(item)
                         
-                        if itemsCounted == 13 {
+                        if itemsCounted == items.count {
                             
                             completed()
                             return
                         }
-                        
                         itemsCounted += 1
+                        print(itemsCounted)
                     }
                     
                 }
