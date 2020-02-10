@@ -30,7 +30,6 @@ class AuthVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        
     }
     
     func setupBanner() {

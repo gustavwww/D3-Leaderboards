@@ -26,10 +26,10 @@ class OAuthTokenGenerator {
         
         oauthswift?.authorize(withCallbackURL: "https://oauth.click/d3leaderboards/oauth-callback/bnet", scope: "", state: "BATTLENET", success: { (credential, response, parameters) in
             
-            print("Success!! " + credential.oauthToken)
             Constants.shared.access_token = "?access_token=" + credential.oauthToken
             Constants.shared.seasonURL = "https://eu.api.battle.net/data/d3/season/\(Constants.shared.access_token)"
             completed()
+            
         }, failure: { (error) in
             
             print(error.description)

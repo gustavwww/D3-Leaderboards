@@ -40,32 +40,32 @@ class Item {
     }
     
     
-    func downloadIcon(completed: @escaping () -> (), failed: @escaping () -> ()) { //Working
-        print("Download func called")
+    func downloadIcon(completed: @escaping () -> (), failed: @escaping () -> ()) {
+        
         let url = URL(string: "http://media.blizzard.com/d3/icons/items/large/\(self.icon).png")!
-        print(url)
+        
         let session = URLSession(configuration: .default)
         
         let getImageFromUrl = session.dataTask(with: url) { (data, response, error) in
-            print("Session dataTask called")
-            if error != nil { //Error?
+            
+            if error != nil {
                 failed()
-                print("Error")
+                
                 return
             }
             
-            if (response as? HTTPURLResponse) != nil { //Server responding?
+            if (response as? HTTPURLResponse) != nil {
                 
-                if let imageData = data { //Corrupted?
+                if let imageData = data {
                     
                     let image = UIImage(data: imageData)
                     
                     self._itemImg = image
-                    print("Got response from server and imageData != nil")
+                    
                     completed()
-                } else {failed(); print("No Response")}
+                } else {failed()}
                 
-            } else {failed(); print("Corrupted")}
+            } else {failed()}
             
         }
         

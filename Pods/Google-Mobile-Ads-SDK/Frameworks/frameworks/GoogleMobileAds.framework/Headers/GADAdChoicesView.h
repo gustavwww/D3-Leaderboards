@@ -10,7 +10,7 @@
 #import <GoogleMobileAds/GADNativeAd.h>
 #import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
-GAD_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /// Displays AdChoices content.
 ///
@@ -18,12 +18,9 @@ GAD_ASSUME_NONNULL_BEGIN
 /// calling -setNativeAppInstallAd: or -setNativeContentAd:, AdChoices content will render inside
 /// the GADAdChoicesView. By default, AdChoices is placed in the top right corner of
 /// GADNativeAppInstallAdView and GADNativeContentAdView.
+GAD_SUBCLASSING_RESTRICTED
 @interface GADAdChoicesView : UIView
-
-/// Native ad object that contains the AdChoices asset. Set this property to populate this view's
-/// content.
-@property(nonatomic, weak) GADNativeAd *nativeAd;
 
 @end
 
-GAD_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

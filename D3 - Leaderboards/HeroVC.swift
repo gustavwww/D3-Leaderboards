@@ -103,7 +103,7 @@ class HeroVC: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    switch item.itemType { //Items getting blue - WORK ON THIS <<< BckgroundImg? Aspect Fit?
+                    switch item.itemType {
                         
                     case "head":
                         self.head.setImage(img, for: .normal)
@@ -214,6 +214,12 @@ class HeroVC: UIViewController {
         print("Pressed")
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    deinit {
+        print(self, "Removed")
+    }
+
     
     
     

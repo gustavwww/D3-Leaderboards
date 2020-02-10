@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 class CircularView: UIView, Shadow {
 
     @IBInspectable var border: Bool = false

@@ -10,9 +10,6 @@ import UIKit
 
 class ItemVC: UIViewController {
 
-    @IBOutlet weak var itemView: UIView!
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

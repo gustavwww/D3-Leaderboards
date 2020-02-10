@@ -25,7 +25,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
     
     var lbService = LBService()
     
-    var classArray = ["Barbarian", "Crusader", "Demon Hunter", "Monk", "Witch Doctor", "Wizard"]
+    var classArray = ["Barbarian", "Crusader", "Demon Hunter", "Monk", "Witch Doctor", "Wizard", "Necromancer"]
     var regionArray = ["EU", "W"]
     
     var pickerInClassMode: Bool = true
@@ -47,6 +47,13 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         toggleInteract(enabled: false)
         lbService.downloadSeasons()
         reloadTable()
+        
+    }
+    
+    func displayMessageView(msg: Message) {
+        
+        let view = MessageView()
+        view.setupView(onView: self.view, msg: msg)
         
     }
 
@@ -222,6 +229,7 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
         if pickerInClassMode {
             //Class Selector
+            let currentClassSelected = classBtn.currentTitle!
             
             classBtn.setTitle(classArray[row], for: .normal)
             
@@ -247,6 +255,24 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
             case "Wizard":
                 classStr = Constants.shared.wizard
                 
+            case "Necromancer":
+                let season = Int(seasonBtn.currentTitle!)
+                
+                if season! > 10 {
+                    
+                    classStr = Constants.shared.necromancer
+                    
+                } else {
+                    //Necromancer not available for season. - Display message.
+                    print("Necro warning!")
+                    pickerView.isHidden = true
+                    classBtn.setTitle(currentClassSelected, for: .normal)
+                    displayMessageView(msg: Message.NoNecromancer)
+                    resetPickerMode()
+                    return
+                }
+                
+
             default:
                 
                 break;
@@ -262,10 +288,20 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         //Season Selection
         if !lbService.seasons.isEmpty {
             
+            if currenClass == Constants.shared.necromancer && Int(lbService.seasons[row])! < 11 {
+                //Necromancer not available for any season below 11. - Display message
+                print("Necro warning!")
+                pickerView.isHidden = true
+                displayMessageView(msg: Message.NoNecromancer)
+                resetPickerMode()
+                return
+            }
+            
            seasonBtn.setTitle(lbService.seasons[row], for: .normal)
             
         } else {
             seasonBtn.setTitle("9", for: .normal)
+            lbService.downloadSeasons()
         }
         
         
@@ -325,19 +361,9 @@ class BoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIP
         
     }
     
-    
-    //Segue
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let destination = segue.destination as? MenuVC {
-            
-            destination.fromVC = self
-            
-        }
-        
         if let destination = segue.destination as? HeroVC {
-            //Send Character (Sender)
             
             if let char = sender as? Char {
                 

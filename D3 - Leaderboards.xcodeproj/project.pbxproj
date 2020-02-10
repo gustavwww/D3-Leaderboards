@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		970D62081E51ED2F0081103D /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D62071E51ED2F0081103D /* SlideSegue.swift */; };
+		970D62081E51ED2F0081103D /* SlideRightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D62071E51ED2F0081103D /* SlideRightSegue.swift */; };
 		970D620A1E51EEAE0081103D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 970D62091E51EEAE0081103D /* GoogleService-Info.plist */; };
 		970D620D1E51F48A0081103D /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D620C1E51F48A0081103D /* CircularView.swift */; };
 		9711981E1ECB2F4A0036A8B0 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711981D1ECB2F4A0036A8B0 /* FancyBtn.swift */; };
 		971198221ECB7BA90036A8B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971198211ECB7BA90036A8B0 /* Extensions.swift */; };
 		972D27F31EE3672700BC15E1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D27F21EE3672700BC15E1 /* Item.swift */; };
 		973213DF1E43A49C009F5F17 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973213DE1E43A49C009F5F17 /* HeroCell.swift */; };
-		973307951E4A4D9D0070443E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973307941E4A4D9D0070443E /* MenuVC.swift */; };
 		973F0FBE1E4B7D4C00EBE598 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */; };
 		974278DD1FAC95DE0010C779 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974278DC1FAC95DE0010C779 /* ItemVC.swift */; };
 		974278DF1FAC973A0010C779 /* BackgroundColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974278DE1FAC973A0010C779 /* BackgroundColorExtension.swift */; };
+		974AA4931FAE131F00BE4E06 /* SlideLeftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974AA4921FAE131F00BE4E06 /* SlideLeftSegue.swift */; };
+		9758596A1FB4EF5C00CDB3B5 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975859691FB4EF5C00CDB3B5 /* MessageView.swift */; };
 		975B41491E60E9AF00A6CA80 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B41481E60E9AF00A6CA80 /* FancyView.swift */; };
 		975D36851E4CE9D2000A20D4 /* LBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D36841E4CE9D2000A20D4 /* LBService.swift */; };
 		975D36871E4D0D87000A20D4 /* HeroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D36861E4D0D87000A20D4 /* HeroVC.swift */; };
@@ -38,17 +39,18 @@
 /* Begin PBXFileReference section */
 		1AD2A67DB8F5CD879283DB97 /* Pods_D3___Leaderboards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_D3___Leaderboards.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A3D3193B419F4EDEF642CB /* Pods-D3 - Leaderboards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3 - Leaderboards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards.debug.xcconfig"; sourceTree = "<group>"; };
-		970D62071E51ED2F0081103D /* SlideSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
+		970D62071E51ED2F0081103D /* SlideRightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightSegue.swift; sourceTree = "<group>"; };
 		970D62091E51EEAE0081103D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		970D620C1E51F48A0081103D /* CircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		9711981D1ECB2F4A0036A8B0 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		971198211ECB7BA90036A8B0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		972D27F21EE3672700BC15E1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		973213DE1E43A49C009F5F17 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
-		973307941E4A4D9D0070443E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		974278DC1FAC95DE0010C779 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		974278DE1FAC973A0010C779 /* BackgroundColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorExtension.swift; sourceTree = "<group>"; };
+		974AA4921FAE131F00BE4E06 /* SlideLeftSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideLeftSegue.swift; sourceTree = "<group>"; };
+		975859691FB4EF5C00CDB3B5 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		975B41481E60E9AF00A6CA80 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		975D36841E4CE9D2000A20D4 /* LBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBService.swift; sourceTree = "<group>"; };
 		975D36861E4D0D87000A20D4 /* HeroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroVC.swift; sourceTree = "<group>"; };
@@ -138,10 +140,9 @@
 		97D583B81E4397D700855DCE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				97D583A81E43923700855DCE /* BoardVC.swift */,
-				973307941E4A4D9D0070443E /* MenuVC.swift */,
-				975D36861E4D0D87000A20D4 /* HeroVC.swift */,
 				9766A5D91EC9D33900C8ABD6 /* AuthVC.swift */,
+				97D583A81E43923700855DCE /* BoardVC.swift */,
+				975D36861E4D0D87000A20D4 /* HeroVC.swift */,
 				974278DC1FAC95DE0010C779 /* ItemVC.swift */,
 			);
 			name = Controller;
@@ -153,10 +154,12 @@
 				97D583BB1E4397FB00855DCE /* HeaderView.swift */,
 				973213DE1E43A49C009F5F17 /* HeroCell.swift */,
 				973F0FBD1E4B7D4C00EBE598 /* MenuCell.swift */,
-				970D62071E51ED2F0081103D /* SlideSegue.swift */,
+				970D62071E51ED2F0081103D /* SlideRightSegue.swift */,
 				970D620C1E51F48A0081103D /* CircularView.swift */,
 				975B41481E60E9AF00A6CA80 /* FancyView.swift */,
 				9711981D1ECB2F4A0036A8B0 /* FancyBtn.swift */,
+				974AA4921FAE131F00BE4E06 /* SlideLeftSegue.swift */,
+				975859691FB4EF5C00CDB3B5 /* MessageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -200,7 +203,6 @@
 				97D583A01E43923700855DCE /* Frameworks */,
 				97D583A11E43923700855DCE /* Resources */,
 				EDF80F1837EBCD0DE5551E1E /* [CP] Embed Pods Frameworks */,
-				B77B95AF93F3D779B9D2DB94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,28 +270,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-D3 - Leaderboards-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B77B95AF93F3D779B9D2DB94 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDF80F1837EBCD0DE5551E1E /* [CP] Embed Pods Frameworks */ = {
@@ -298,9 +288,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-D3 - Leaderboards/Pods-D3 - Leaderboards-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,16 +322,17 @@
 				975D36871E4D0D87000A20D4 /* HeroVC.swift in Sources */,
 				97D583BF1E43980F00855DCE /* Shadow.swift in Sources */,
 				97ED25AD1E4540DA00AA741D /* Char.swift in Sources */,
-				970D62081E51ED2F0081103D /* SlideSegue.swift in Sources */,
+				970D62081E51ED2F0081103D /* SlideRightSegue.swift in Sources */,
 				9766A5DA1EC9D33900C8ABD6 /* AuthVC.swift in Sources */,
 				97D583BC1E4397FB00855DCE /* HeaderView.swift in Sources */,
+				974AA4931FAE131F00BE4E06 /* SlideLeftSegue.swift in Sources */,
 				975B41491E60E9AF00A6CA80 /* FancyView.swift in Sources */,
 				97D583A71E43923700855DCE /* AppDelegate.swift in Sources */,
 				971198221ECB7BA90036A8B0 /* Extensions.swift in Sources */,
 				970D620D1E51F48A0081103D /* CircularView.swift in Sources */,
 				976D3E481E43AC6A00301F7A /* Constants.swift in Sources */,
 				974278DF1FAC973A0010C779 /* BackgroundColorExtension.swift in Sources */,
-				973307951E4A4D9D0070443E /* MenuVC.swift in Sources */,
+				9758596A1FB4EF5C00CDB3B5 /* MessageView.swift in Sources */,
 				9711981E1ECB2F4A0036A8B0 /* FancyBtn.swift in Sources */,
 				974278DD1FAC95DE0010C779 /* ItemVC.swift in Sources */,
 			);

@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 class HeaderView: UIView, Shadow {
 
     @IBInspectable var shadowRadius: CGFloat = 0 {

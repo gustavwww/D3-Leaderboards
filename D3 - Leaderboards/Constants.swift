@@ -29,6 +29,7 @@ class Constants {
     let monk = "monk"
     let witchDoctor = "wd"
     let wizard = "wizard"
+    let necromancer = "necromancer"
     
     
     var seasonURL = "https://eu.api.battle.net/data/d3/season/"
